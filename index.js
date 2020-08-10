@@ -11,11 +11,11 @@ const connection = mysql.createConnection({
 const query = util.promisify(connection.query).bind(connection);
 const layoutTemplate = fs.readFileSync('index.html', 'utf8');
 
-fs.rmdirSync('dist', { recursive: true });
-fs.mkdirSync('dist');
-fs.mkdirSync('dist/assets');
-fs.copyFileSync('./assets/logo.png', './dist/assets/logo.png');
-fs.copyFileSync('./assets/styles.css', './dist/assets/styles.css');
+fs.rmdirSync('docs', { recursive: true });
+fs.mkdirSync('docs');
+fs.mkdirSync('docs/assets');
+fs.copyFileSync('./assets/logo.png', './docs/assets/logo.png');
+fs.copyFileSync('./assets/styles.css', './docs/assets/styles.css');
 
 async function exportVideos() {
     const rows = await query('SELECT * FROM ag_videos ORDER BY timestamp ASC');
@@ -35,7 +35,7 @@ async function exportVideos() {
             </div>
             `;
     });
-    fs.writeFileSync(`dist/videos.html`, layoutTemplate
+    fs.writeFileSync(`docs/videos.html`, layoutTemplate
         .replace(/{{ title }}/g, 'Vidéos')
         .replace('{{ content }}', videosContent));
 }
@@ -62,7 +62,7 @@ async function exportMembers() {
             `;
     });
     membersContent += '</table>';
-    fs.writeFileSync(`dist/members.html`, layoutTemplate
+    fs.writeFileSync(`docs/members.html`, layoutTemplate
         .replace(/{{ title }}/g, 'Membres')
         .replace('{{ content }}', membersContent));
 }
@@ -100,7 +100,7 @@ async function exportBlog() {
             .replace('{{ content }}', contentTemplate)
             .replace(/{{ title }}/g, blog_title);
         const fileName = `article-${row.slug_fr}.html`;
-        fs.writeFileSync(`dist/${fileName}`, pageTemplate);
+        fs.writeFileSync(`docs/${fileName}`, pageTemplate);
         const date = new Date(row.timestamp).toLocaleDateString("fr-CA");
         indexContent += `
 <div class="page_link">
@@ -111,7 +111,7 @@ async function exportBlog() {
     const indexTemplate = layoutTemplate
         .replace(/{{ title }}/g, 'Articles')
         .replace('{{ content }}', indexContent);
-    fs.writeFileSync(`dist/index.html`, indexTemplate);
+    fs.writeFileSync(`docs/index.html`, indexTemplate);
 }
 
 async function exportPages() {
@@ -129,7 +129,7 @@ async function exportPages() {
             .replace('{{ content }}', contentTemplate)
             .replace(/{{ title }}/g, blog_title);
         const fileName = `a-propos.html`;
-        fs.writeFileSync(`dist/${fileName}`, pageTemplate);
+        fs.writeFileSync(`docs/${fileName}`, pageTemplate);
     });
 }
 
@@ -175,7 +175,7 @@ async function exportForums() {
             const messageTemplate = layoutTemplate
                 .replace('{{ content }}', topicContent)
                 .replace(/{{ title }}/g, topic.title);
-            fs.writeFileSync(`dist/${topicFileName}`, messageTemplate);
+            fs.writeFileSync(`docs/${topicFileName}`, messageTemplate);
         }
 
         forumContent += '</table>';
@@ -183,7 +183,7 @@ async function exportForums() {
         const pageTemplate = layoutTemplate
             .replace('{{ content }}', forumContent)
             .replace(/{{ title }}/g, row.name_fr);
-        fs.writeFileSync(`dist/${fileName}`, pageTemplate);
+        fs.writeFileSync(`docs/${fileName}`, pageTemplate);
 
         indexContent += `
         <div class="page_link">
@@ -194,7 +194,7 @@ async function exportForums() {
     const indexTemplate = layoutTemplate
         .replace(/{{ title }}/g, 'Forum')
         .replace('{{ content }}', indexContent);
-    fs.writeFileSync(`dist/forum.html`, indexTemplate);
+    fs.writeFileSync(`docs/forum.html`, indexTemplate);
 }
 
 (async () => {
