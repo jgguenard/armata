@@ -16,6 +16,7 @@ fs.mkdirSync('docs');
 fs.mkdirSync('docs/assets');
 fs.copyFileSync('./assets/logo.png', './docs/assets/logo.png');
 fs.copyFileSync('./assets/styles.css', './docs/assets/styles.css');
+fs.copyFileSync('./CNAME', './docs/CNAME');
 
 async function exportVideos() {
     const rows = await query('SELECT * FROM ag_videos ORDER BY timestamp ASC');
