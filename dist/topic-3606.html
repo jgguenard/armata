@@ -1,0 +1,219 @@
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="assets/styles.css" rel="stylesheet" type="text/css" media="all" />
+    <title>Pour Ceux qui ne savent pas utiliser les macros voici des exempl</title>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <img alt="logo" src="assets/logo.png" class="logo" />
+        <div class="sub-title">Archives</div>
+        <nav class="site-nav">
+            <a href="index.html">Articles</a>
+            <a href="members.html">Membres</a>
+            <a href="videos.html">Vidéos</a>
+            <a href="forum.html">Forum</a>
+            <a href="a-propos.html">À propos</a>
+        </nav>
+        <div class="note">Si vous avez déjà été membre de la guilde et que vous voulez reprendre contact ou contribuer aux archives, <a href="mailto:contact.armata@gmail.com" target="_blank">écrivez-nous</a> !</div>
+    </header>
+    <div class="page">
+        <div class="search">
+            <div class="gcse-search"></div>
+        </div>
+        <div class="page-content-wrapper">
+            <h1>Pour Ceux qui ne savent pas utiliser les macros voici des exempl</h1>
+            <div class="content">
+                
+<div class="forum-message">
+<div class="sub-title">Message #1 le <i>2013-4-27 @ 2:28:21</i> par <strong>Brown Skin:</strong></div>
+<div class="message-body">Rift Macros Tutorial<br />
+Basic Macro Commands, Mouseovers, and Cast Sequences<br />
+Macros are a feature of Rift that can make the lives of many players much easier. They allow you to create scripts (macros) of casting/skill use commands that replace the typical buttons on your action bar. Depending on the role you're playing, you could squeeze five or six damage skills into a single button making dps far less complicated to juggle in the heat of combat. You can also make heals as simple as putting the mouse over the player's name in a raid frame and pushing a button, no targeting required. Hybrids of dps/heals become much more powerful in a support role when the player is not forced to constantly swap targets. By reducing the complexity of button presses and clicks a player needs to make, a player's performance will increase using macros.<br />
+<br />
+Getting Started: Macro Interface<br />
+To bring up the macro interface, press ESC or type /macro and push enter. You will see the interface to the right. When setting up your macro, there are only a few components to worry about. First is the list to the left, where your limited number of macros per character can be saved. You can save and delete selected macros with the buttons on the bottom.<br />
+<br />
+Every macro has three components. First, you'll select an icon from the 100+ available. You can ignore the icon if you are going to display (#show) an actual skill on your bar, for the purpose of seeing its cooldown. Next, give it a name to help you tell what the macro does at a glance. With those two things out of the way, all that's left is to fill commands into the script box and construct the macro itself.<br />
+<br />
+Basic Macro Commands<br />
+Let's look at some of the most basic commands for Macros. This will serve as a nice reference to people new to the concept. I am NOT going into great detail here. If you want to see every macro command available, consult Zam. My goal is to get you up and running so you can apply this to help yourself and your guild.<br />
+<br />
+Each command goes on a new line:<br />
+<br />
+#show spell name - Displays spell icon and cooldown when macro is placed on bar.<br />
+suppressmacrofailures - hides macro failures, necessary to avoid error messages in multi-ability macros.<br />
+stopcasting - used least often, can stop casting the previous ability, like a channel or long cast time spell immediately to focus on cast that needs to be done asap.<br />
+cast spell name - uses the skill or spell on current target. This command has some optional modifiers.<br />
+Type these commnds into the script box, click save and drag the icon from the macro list to your action bar and done!<br />
+<br />
+That's all you need to know to set up a decent Macro, along with some knowledge of your own damage or healing rotations. The first two lines will be present in almost every macro you make, while the third is used only for emergency-type situations. I'll give some examples on how to use these a little further in. Other useful commands for macros are:<br />
+<br />
+Saveequip 1-9 - Saves current gear loadout to specified slot 1 through 9.<br />
+Loadequip 1-9 - Automatically wears gear determined by saveequip.<br />
+Use item name - uses selected item, for ex. use heroic healing tonic.<br />
+say, yell, emote, rw - Used by players to tell others of interrupts, special abilities, raid warnings etc.<br />
+focus - this sets your focus (by default you can also press Control + F), which is distinct from a target. Used optionally by the cast command.<br />
+All of the above can be used with a / command, but no macro command requires a / in front of it. Players often type /focus and /saveequip without macros as they are simple commands. When using a channel to communicate, like say or yell, only one will work in each macro. Using a macro to communicate, you may want to insert %t where the target's name would be. For example, &quot;say casting battle rez on %t&quot; will let your party know who is the target of your spell.<br />
+<br />
+Macros and Cooldowns<br />
+The most important macros players use, coined fall-throughs in other MMORPGs, will be used for DPS rotation or healing. This is the type most souls will need, although some like Bard do not macro very well at all. The reason for this is simple. Bards have many 0-cooldown abilities. If Trion allowed you to create casting sequences that go through a chain of commands automatically, it would be both overpowered and too complicated for laymen. Instead, for this type of macro to work properly, every item in the list save the last one must have a cooldown. It will &quot;fall through&quot; the list to the next available spell until it reaches the last, which is typically something you can spam. Otherwise, the macro does nothing when it reaches the end.<br />
+<br />
+Each cast ability in a macro requires a button press. You must let the first finish before the next is available, and macros are still subject to the global cooldown. Commands like say will go off without a second press as they do not count as casts. However, a skill that doesn't trigger the global cooldown would still require a second press.<br />
+<br />
+Cast Command Modifiers<br />
+The cast command can be modified to target different entities. For example, cast @focustarget fireball would cast on the target of your current focus. Here's a full list of available options:<br />
+<br />
+@self - Cast on yourself, for buffs with cooldowns that you need to maintain.<br />
+@mouseover - cast on target cursor is over. Good for healing and cleansing in raid frames.<br />
+@focus - Cast on focus after typing /focus with a target selected.<br />
+@focustarget - Cast on focus' target, usually an offensive spell.<br />
+@targettarget - Cast on target of target. This can be enabled permanently in game options.<br />
+@mark 1-8 - cast spell on mark #1-8. Good for CC and WFs.<br />
+@pet - cast on your Pet.<br />
+Applied Macros: Examples<br />
+The following macro is for the popular marksman/ranger build for Rogues. It will cast first shadow fire, which gives a damage buff the marksman wants active at all times. Shadow fire has a cooldown, as does the follow-up empowered shot. The final ability, quick shot, will be used when the other two are on cooldown or the marksman is on the move:<br />
+<br />
+#show shadow fire<br />
+suppressmacrofailures<br />
+cast shadow fire<br />
+cast empowered shot<br />
+cast quick shot<br />
+This is an example for the Mage Chloromancer, which uses focus targeting. If you type /focus with the tank targeted these spells will automatically target the player thanks to the @focus cast modifier. This spell also incorporates stopcast so that anything the chloro is casting at the time is interrupted in favor of the emergency tank heals:<br />
+<br />
+#show Essence Surge<br />
+suppressmacrofailures<br />
+stopcasting<br />
+cast @focus Essence Surge<br />
+cast @focus Natural Healing</div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #2 le <i>2013-4-28 @ 21:41:50</i> par <strong>Kare:</strong></div>
+<div class="message-body">ANd then, they dont understand english that much!</div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #3 le <i>2013-4-28 @ 21:43:09</i> par <strong>Hertuu:</strong></div>
+<div class="message-body">Yes, no, toaster, konichiwa?</div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #4 le <i>2013-4-29 @ 14:01:20</i> par <strong>Nothing:</strong></div>
+<div class="message-body">Tin pour les pas anglais :<br />
+<br />
+<br />
+Rift Macros Tutorial<br />
+Commandes de base de macro, mouseovers et séquences Cast<br />
+Les macros sont une caractéristique du Rift qui peut rendre la vie de beaucoup de joueurs beaucoup plus facile. Ils vous permettent de créer des scripts (macros) de coulée / compétence commandes d'utilisation qui remplacent les boutons typiques sur votre barre d'action. Selon le rôle que vous jouez, vous pouvez presser cinq ou six compétences de dégâts dans un unique bouton faisant dps beaucoup moins compliqué de jongler dans la chaleur du combat. Vous pouvez également faire guérit aussi simple que de mettre la souris sur le nom du joueur dans un cadre de raid et en poussant un bouton, aucun ciblage nécessaire. Hybrides de dps / guérit devenir beaucoup plus puissant dans un rôle de soutien lorsque le joueur n'est pas obligé d'échanger constamment des cibles. En réduisant la complexité de l'appuie sur un bouton et de clics qu'un joueur doit faire, la performance d'un joueur va augmenter l'utilisation des macros.<br />
+<br />
+Mise en route: Macro Interface<br />
+Pour faire apparaître l'interface macro, appuyez sur Echap ou type / macro et appuyez sur Enter. Vous verrez l'interface vers la droite. Lorsque vous configurez votre macro, il ya seulement quelques composants à s'inquiéter. La première est la liste de gauche, oÃ¹ votre nombre limité de macros par caractère peut être sauvé. Vous pouvez enregistrer et supprimer des macros sélectionnées avec les boutons sur le fond.<br />
+<br />
+Chaque macro comporte trois volets. D'abord, vous sélectionnez une icône de la + 100 disponibles. Vous pouvez ignorer l'icône si vous allez afficher (# show) une compétence réelle sur votre bar, dans le but de voir son temps de recharge. Ensuite, lui donner un nom pour vous aider à dire ce que la macro fait un coup d'Âœil. Avec ces deux choses hors de la voie, tout ce qui reste est de remplir des commandes dans la boîte de script et de construire la macro elle-même.<br />
+<br />
+Commandes de macro de base<br />
+Regardons quelques-unes des commandes les plus basiques pour les macros. Cela servira comme une belle référence à des personnes nouvelles au concept. Je ne vais pas dans les détails ici. Si vous voulez voir tous les macro-commandes disponibles, consultez Zam. Mon but est de vous lever et de courir afin que vous puissiez les appliquer à vous-même et votre guilde aider.<br />
+<br />
+Chaque commande va sur une nouvelle ligne:<br />
+<br />
+# Indiquer le nom du sort - Affiche l'icône du sort et de recharge lorsque macro est placée sur la barre.<br />
+suppressmacrofailures - cache échecs macro, nécessaires pour éviter les messages d'erreur dans les macros multi-compétences.<br />
+Stopcasting - utilisé moins souvent, peut arrêter la coulée de la capacité précédente, comme un canal ou un temps d'incantation longue période immédiatement se concentrer sur casting qui doit être fait dès que possible.<br />
+Lancer un sort nom - utilise la compétence ou sort sur la cible actuelle. Cette commande a quelques modificateurs optionnels.<br />
+Tapez ces commnds dans la zone de script, cliquez sur Enregistrer et faites glisser l'icône de la liste des macros à votre barre d'action et fait!<br />
+<br />
+C'est tout ce que vous devez savoir pour créer une macro décent, avec une certaine connaissance de vos propres dommages ou des rotations de guérison. Les deux premières lignes seront présents dans presque tous les macro que vous faites, alors que le troisième est utilisé seulement pour les situations du type d'urgence. Je vais vous donner quelques exemples sur la façon d'utiliser ces un peu plus loin po D'autres commandes utiles pour les macros sont:<br />
+<br />
+Saveequip 1-9 - Enregistre loadout de vitesse actuelle de spécifié l'emplacement 1 à 9.<br />
+Loadequip 1-9 - porte automatique vitesse déterminé par le saveequip.<br />
+Utiliser le nom d'article - utilise l'élément sélectionné, par ex. utiliser tonique de guérison héroÃ¯que.<br />
+dire, crier, emote, rw - utilisé par les joueurs de dire aux autres d'interruptions, des capacités spéciales, les avertissements de raid, etc<br />
+Focus - cela définit votre attention (par défaut, vous pouvez aussi appuyer sur Ctrl + F), qui est distincte d'une cible. Éventuellement utilisé par la commande de fonte.<br />
+Tout ce qui précède peut être utilisé avec la commande /, mais aucune commande macro nécessite un / devant elle. Les joueurs tapent souvent / focus et / saveequip sans macros car ils sont des commandes simples. Lors de l'utilisation d'un canal de communication, comme, disons, ou de crier, seulement on va travailler dans chaque macro. En utilisant une macro pour communiquer, vous pouvez insérer% t oÃ¹ le nom de la cible serait. Par exemple, &quot;dit coulée rez de bataille% t&quot; sera Prévenez votre groupe qui est la cible de votre sort.<br />
+<br />
+Les macros et temps de recharge<br />
+Le macros plus importante joueurs usage, inventé automne-through dans les autres MMORPG, sera utilisé pour DPS rotation ou la guérison. C'est le type le plus d'âmes auront besoin, même si certains ne le font pas comme Bard macro très bien à tous. La raison en est simple. Les bardes ont beaucoup de capacités 0-recharge. Si Trion vous a permis de créer des séquences de coulée qui passent par une chaîne de commandes automatiquement, il serait à la fois maîtrisé et trop compliqué pour les laÃ¯cs. Au lieu de cela, pour ce type de macro fonctionne correctement, chaque élément de la liste sauver le dernier doit avoir un temps de recharge. Il va Â«passerÂ» la liste pour le prochain sort disponibles jusqu'à ce qu'il atteigne le dernier, qui est généralement quelque chose que vous pouvez spammer. Sinon, la macro ne fait rien quand il arrive à la fin.<br />
+<br />
+Chaque capacité de fonte dans une macro nécessite une pression sur un bouton. Vous devez laisser la première arrivée avant le prochain est disponible, et les macros sont toujours soumis au temps de recharge global. Les commandes comme disent s'éteignent sans une seconde presse, car ils ne sont pas considérés comme des moulages. Cependant, une compétence qui ne déclenche pas le temps de recharge global aurait encore besoin d'une deuxième presse.<br />
+<br />
+Moulage Modificateurs de commande<br />
+La commande de fonte peut être modifié pour cibler les différentes entités. Par exemple, fonte @ focustarget boule de feu serait jeté sur la cible de votre objectif actuel. Voici une liste complète des options disponibles:<br />
+<br />
+@ Auto - monter vous-même, pour les amateurs avec temps de recharge que vous devez maintenir.<br />
+@ Mouseover - monter le curseur de cible est terminée. Bon pour la guérison et de purification dans des cadres de raid.<br />
+@ Concentrer - Monter focus après tapant / focus avec une cible choisie.<br />
+@ Focustarget - Cast sur la cible accent, généralement un sort offensif.<br />
+@ Targettarget - Cast sur la cible de la cible. Cela peut être activé en permanence dans les options de jeu.<br />
+@ Marque 1-8 - sort jeté sur mark # 1-8. Bon pour CC et WFS.<br />
+@ Pet - jeter sur votre animal.<br />
+Macros appliqués, par exemple<br />
+La macro suivante est pour le tireur / de garde populaire pour construire des Rogues. Il jettera premier feu de l'ombre, ce qui donne un buff de dégâts le tireur veut actif en tout temps. Ombre feu a un temps de recharge, de même que le suivi habilité fusillés. La capacité finale, tir rapide, sera utilisé lorsque les deux autres sont en cours de recharge ou le tireur est en mouvement:<br />
+<br />
+# Show feu de l'ombre<br />
+suppressmacrofailures<br />
+jeter le feu de l'ombre<br />
+fonte habilité abattu<br />
+jeter tir rapide<br />
+Ceci est un exemple pour le Chloromancer Mage, qui utilise accent ciblage. Si vous tapez / focus avec le réservoir cible ces sorts vont cibler automatiquement le lecteur grâce à la mise au point modificateur @ coulé. Ce sort intègre également stopcast sorte que tout le chlore est coulée à l'époque est interrompu en faveur du réservoir d'urgence guérit:<br />
+<br />
+# Show Surge Essence<br />
+suppressmacrofailures<br />
+Stopcasting<br />
+@ jeter accent Essence Surge<br />
+@ jeter concentrer Natural Healing<br />
+<br />
+Who Picks Beer Foam Roll!</div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #5 le <i>2013-4-29 @ 17:44:29</i> par <strong>Brown Skin:</strong></div>
+<div class="message-body">google traduction a la rescue loll!!</div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #6 le <i>2013-4-29 @ 17:46:01</i> par <strong>Kare:</strong></div>
+<div class="message-body">Ben non nothing stune machine y a traduit sa lui meme en 2 minutes! :P</div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #7 le <i>2013-4-29 @ 17:50:07</i> par <strong>Drilgen:</strong></div>
+<div class="message-body">report nothing for french thing 0.o</div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #8 le <i>2013-4-29 @ 23:10:14</i> par <strong>Piedplat:</strong></div>
+<div class="message-body">Bah Nothing bon travail, du coup, même si tu as google ou pas, tu t'es relu après. ;)</div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #9 le <i>2013-4-30 @ 9:18:33</i> par <strong>Nothing:</strong></div>
+<div class="message-body">
+<blockquote>
+<cite>Piedplat wrote:</cite>
+Bah Nothing bon travail, du coup, même si tu as google ou pas, tu t'es relu après. ;)</blockquote>
+<br />
+Y'a une seul personne qui ma relu :<br />
+<br />
+<img src="http://www.yalelawtech.org/wp-content/uploads/google-troll.jpg" alt="google-troll.jpg" class="bbcode_img" /></div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #10 le <i>2013-4-30 @ 14:40:57</i> par <strong>TortureX:</strong></div>
+<div class="message-body">piedplat got owned by google</div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #11 le <i>2013-4-30 @ 15:46:25</i> par <strong>Piedplat:</strong></div>
+<div class="message-body">Vrai, quand tu continues, c'est réécrit tout croche... Tu fail Nothing......</div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #12 le <i>2013-4-30 @ 19:42:51</i> par <strong>Brown Skin:</strong></div>
+<div class="message-body">
+<blockquote>
+<cite>TortureX wrote:</cite>
+piedplat got owned by google</blockquote>
+<br />
+haha est bonne torture!</div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">Ce site Web est une version en lecture seule du contenu généré par notre communauté depuis 2008.</footer>
+<script async src="https://cse.google.com/cse.js?cx=018371196978176306217:58twx-mazfs"></script>
+</body>
+</html>

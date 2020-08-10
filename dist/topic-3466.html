@@ -1,0 +1,407 @@
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="assets/styles.css" rel="stylesheet" type="text/css" media="all" />
+    <title>Macro</title>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <img alt="logo" src="assets/logo.png" class="logo" />
+        <div class="sub-title">Archives</div>
+        <nav class="site-nav">
+            <a href="index.html">Articles</a>
+            <a href="members.html">Membres</a>
+            <a href="videos.html">Vidéos</a>
+            <a href="forum.html">Forum</a>
+            <a href="a-propos.html">À propos</a>
+        </nav>
+        <div class="note">Si vous avez déjà été membre de la guilde et que vous voulez reprendre contact ou contribuer aux archives, <a href="mailto:contact.armata@gmail.com" target="_blank">écrivez-nous</a> !</div>
+    </header>
+    <div class="page">
+        <div class="search">
+            <div class="gcse-search"></div>
+        </div>
+        <div class="page-content-wrapper">
+            <h1>Macro</h1>
+            <div class="content">
+                
+<div class="forum-message">
+<div class="sub-title">Message #1 le <i>2011-2-11 @ 1:15:35</i> par <strong>Eloctinar:</strong></div>
+<div class="message-body">Un petit guide un peu pèle mêle pour ceux a qui ça peut aider. Surtout pour moi lol<br />
+<br />
+Le but des macro c'est de clearer l'interface, et de jouer avec une ou 2 barres max et de ne pas se faire chier avec 40 skills.<br />
+<br />
+L'ordre dans lequel on monte la macro est très importante parce que dans rift la macro stop après avoir fait la première skills qui étais disponible.<br />
+<br />
+Alors une macro normal:<br />
+<br />
+Tout dabord on fait apparaitre le logo dune ranged skill. Pourquoi un #show x ranged ability?  Ceci donne le logo du skill, mais ranged pour quil s'&quot;allume&quot; lorsque vous etes dans le range pour le faire.<br />
+<br />
+Ensuite les skills réactionnaires, genre après un block ou un counter strike. Bien sur il faut mettre la les skills qu'on se fou de lancer des qu'ils sont up. Si vous avez un disarm de 5 sec par exemple, c'est peut être mieux de le binder sur une autre touche pour vraiment l'utiliser au bon moment.<br />
+<br />
+Par la suite, les skills avec un bon cooldown<br />
+<br />
+Ensuite, les skills corp a corp spammable.<br />
+<br />
+Apres, les skills ranged avec cool down.<br />
+<br />
+Pour finir avec les skills ranged spammable...<br />
+<br />
+<br />
+example de macro<br />
+<br />
+#show Flamespear (ranged ability)<br />
+cast Furious Rage (reactive ability)<br />
+cast Face Slam (melee ability with a cooldown such as 6 seconds)<br />
+cast Reckless Strike (Melee Range Spamable)<br />
+cast Stonespear (ranged ability with cooldown)<br />
+cast Flamespear (ranged spamable)<br />
+<br />
+<br />
+Example tu chase un gars, tu spamm la macro, ca devrait aller a ton premier skill de ranged qui est up soit celui avec cool down ( Stonespear  ) la tu stun le gars, tu continue a la balancer des Flamespear pendant que tu te rapproche, aussitot que tu est en range melee, ca va switcher automatiquement, pis tu va le frapper avec ton premier skill de la list qui est up (Face Slam). Ensuite ça va aller directement a Reckless Strike et des que Furious charge est up, juste a pitonner sur le même bouton et le cycle va rouler comme dans du beurre. Alors très important de mettre les skills dans le bon ordre.<br />
+<br />
+Ceci dit, moi perso jme fait une macro single target, et une macro AoE, alors juste avec 2 slot jai deja la pluparts de mes rotations de combat, les autre slot ca sert pour mes skills unique, les gros heals, les skills durgence, les skills hors global cool down...<br />
+...<br />
+<br />
+Il y a aussi la fonction stopcasting.<br />
+<br />
+#show Healing Grace<br />
+stopcasting<br />
+cast @mouseover Healing Grace<br />
+<br />
+Stop casting, çà stop le casting que vous êtes entrain de faire, si jamais vous vous apercevez que le tank est entrain de mourir, au lieu d'attendre 1-2 seconde pour que ton spell, et ensuite lancer le heal, avec cette macro c'est direct.<br />
+<br />
+Ça dépend des préférences de chacun .<br />
+<br />
+<br />
+Le reste c'est juste des info en block random pour donner des idées.<br />
+<br />
+<br />
+Moving on. Let's say you're a healer. You've got three heal spells, one with a low cast time and low heal amount, one with a little more cast time and a little more healing, and your big heal with a long cast time.<br />
+Three action bar buttons? And you have three souls worth of spells to organize??? No thank you.<br />
+<br />
+/cast @mouseover [shift] Big Heal<br />
+/cast @mouseover [ctrl] Mid Heal<br />
+/cast @mouseover Baby Heal<br />
+<br />
+ONE action bar button.<br />
+<br />
+The below 3 types of macros are extremely useful. If you are able to master these 3 combos for your class then you can get rid of a crap ton of buttons off your hot bar. Enjoy!<br />
+<br />
+Alternate Target (Mouse Over) Macro<br />
+Code:<br />
+<br />
+#show Spark (ranged taunt)<br />
+stopcasting (this will stop you if you are in the process of casting)<br />
+cast @mouseovertarget Spark (ranged taunt)<br />
+<br />
+The above macro will taunt your mouse over target and then run through all your available attacks on it. You could replace this with your crowd control like Transmogrify so that you can CC an add without changing your target.<br />
+EDIT: This Alternate Target Macro can also be used by healers / buffers. Just put your heals in here and you can mouse over the portraits of your group / raid members. This removes you having to click on a person. This is great for you keeping your main tank targeted while healing the off tank or someone else needing it.<br />
+<br />
+Self Purge Macro<br />
+Code:<br />
+<br />
+#show Spell Breaker (ally/self dispell)<br />
+target MaddBomber83 (will target you if you put in your name)<br />
+cast Spell Breaker (ally/self Dispell)<br />
+targetlasttarget<br />
+<br />
+The above macro will cast your dispel (or heal, or whatever else you want) on you and then swap back to your current target.<br />
+<br />
+<br />
+Websites posted through out thread:<br />
+<br />
+bard using /wait we are not sure it is still supported<br />
+<a href="http://www.youtube.com/watch?v=PT2M14js3dU">http://www.youtube.com/watch?v=PT2M14js3dU</a><br />
+<br />
+healing mouse over macro<br />
+<a href="http://thisisnotarift.blogspot.com/2011/02/mouse-over-macro-and-my-thoughts-on.html">http://thisisnotarift.blogspot.com/2011/02/mouse-over-macro-and-my-thoughts-on.html</a><br />
+<br />
+slash commands<br />
+<a href="http://www.riftlevelingguide.com/">http://www.riftlevelingguide.com</a><br />
+<br />
+macro commands<br />
+<a href="http://www.riftlevelingguide.com/">http://www.riftlevelingguide.com</a><br />
+<br />
+<br />
+<br />
+</div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #2 le <i>2011-2-11 @ 7:43:32</i> par <strong>Asakra:</strong></div>
+<div class="message-body">Il me semble que j'avais tester d'envoyer 2 spell un a la suite de l'autre et ca fesait un message qu'on ne pouvait mettre plus d'un skill par macro, as tu essayer ?</div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #3 le <i>2011-2-11 @ 7:54:06</i> par <strong>Meitral:</strong></div>
+<div class="message-body">exacte asakra, aux dernieres nouvelle on avais un message qui disais qu'on ne pouvais avoir plus d'un spell/skill par macro. Par contre, les skill avec condition combiner au skill spammable marche toujours.<br />
+<br />
+Vous pouvez setter une macro avec 80 skills, ca marchais encore meme en ayant le fameux message qui dit qu'on ne peux pas. Encore par contre, moi personnelement j'ai remarquer que mes skill popais moin et fesais moin de crit que lorsque je les activais manuellement. </div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #4 le <i>2011-2-13 @ 0:29:41</i> par <strong>Eloctinar:</strong></div>
+<div class="message-body">si vous avez dautre idee de bonne macro ou autre move important, gênez vous pas</div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #5 le <i>2011-2-13 @ 17:29:27</i> par <strong>Asakra:</strong></div>
+<div class="message-body">J'ai pas réussi la macro d'Assist comme faut, quoi que j'ai pas eu le temps de tester beaucoup durant le raid, j'Avais essayer:<br />
+target halter<br />
+assist<br />
+mais ca fonctionnais pas, donc je devais faire le /target halter sur un hotkey R et appuyer sur F (par défaut le target de la target) pour que ca marche... kkun a essayer quelque chose qui fonctionne d'un seul hotkey ?</div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #6 le <i>2011-2-15 @ 2:55:52</i> par <strong>Eloctinar:</strong></div>
+<div class="message-body">Mouse-Over Healing Macro.<br />
+#show Healing Breath<br />
+stopcasting<br />
+cast @mouseover Healing Breath<br />
+<br />
+Also would like to point out that mouse-over's do work when mousing over someone's avatar not just name plates!<br />
+<br />
+Just like that and of course you would replace Â“Healing BreathÂ” with all your other healing spells.<br />
+<br />
+Enjoy (I know I will)<br />
+<br />
+Thanks to Phalsadoom for this next part.<br />
+<br />
+Here is a Guide I found that will better explain RIFT Macro's:<br />
+<br />
+Macros<br />
+<br />
+A macro in the context of video games refers to a set of instructions that can be issued together with one input or Â“hotkey.Â” Rift supports macroing via an in-game menu. Opening that menu brings up a panel with a list of macro slots on the left, and the macro fields on the right. You can give your macro a name and select an icon for it. You can also have a macro inherit the icon and cooldown timer of some ability using the following syntax:<br />
+<br />
+#show ability<br />
+<br />
+e.g. #show Commander´s Order will cause the macro to inherit the icon and ability icon of the skill called Â“Commander´s OrderÂ”<br />
+<br />
+<br />
+Macro Commands<br />
+<br />
+An important component of macros is the ability to issue game commands via text input. A macro generally saves one or more of these commands for future and repeated use. Some the game commands available are below.<br />
+<br />
+* /saveequip followed by an index number (e.g. Â“/saveequip 1?)<br />
+o This saves the currently equipped set of equipment to the specified index.<br />
+* /loadequip followed by an index number (e.g. Â“/loadequip 1?)<br />
+o This loads the saved set of equipment from the specified index.<br />
+* /cast followed by an ability name (e.g. Â“/cast Motif of TenacityÂ”)<br />
+o This casts the specified ability. You can specify a target for that ability using special targeting syntax (e.g. /cast @mouseover Commander´s Order) .<br />
+* /stopcasting<br />
+o This tells the game engine to stop the current action and is a necessary intermediate step between chained macro commands.<br />
+* /use item<br />
+o This uses the item named (e.g. /use Blessed Tome)<br />
+* /help<br />
+o This lists the Rift recognized / commands.<br />
+<br />
+Syntax<br />
+<br />
+When listing commands in the macro interface, you do not need the leading slash, so rather than /cast, you would just use cast. The following illustrates:<br />
+<br />
+#show Commander's Order<br />
+cast @mouseover Commander's Order<br />
+<br />
+Slash Commands<br />
+<br />
+The following is a list of all slash commands we know about. If you find any that´s missing, feel free to let us know.<br />
+<br />
+Slash commands can be used in the chat channels or even inside macros.<br />
+<br />
+/abilitybar<br />
+/afk<br />
+/announce<br />
+/ann<br />
+/assist<br />
+/ban<br />
+/battleground<br />
+/bindmacrofile<br />
+/bow<br />
+/camp<br />
+/cancelbuff<br />
+/cast<br />
+/cban<br />
+/cexit<br />
+/chan<br />
+/channel<br />
+/chatban<br />
+/chatexit<br />
+/chatinfo<br />
+/chatinvite<br />
+/chatjoin<br />
+/chatkick<br />
+/chatleave<br />
+/chatlist<br />
+/chat<br />
+/chatsay<br />
+/chatunban<br />
+/chatwho<br />
+/cheer<br />
+/chicken<br />
+/cinvite<br />
+/cjoin<br />
+/ckick<br />
+/clearallmarks<br />
+/clearfocus<br />
+/clearmark<br />
+/cleave<br />
+/combatlog<br />
+/cry<br />
+/csay<br />
+/cunban<br />
+/dance<br />
+/dismount<br />
+/dnd<br />
+/duelaccept<br />
+/duel<br />
+/duelreject<br />
+/emote<br />
+/equip<br />
+/exit<br />
+/exportkeybindings<br />
+/exportui<br />
+/filter<br />
+/flex<br />
+/focus<br />
+/follow<br />
+/friend<br />
+/friendslist<br />
+/gdemote<br />
+/getfocus<br />
+/ginvite<br />
+/gkick<br />
+/gleave<br />
+/glog<br />
+/gpromote<br />
+/gsetmotd<br />
+/gsetnotes<br />
+/guild<br />
+/ignore<br />
+/ignore_setnote<br />
+/importkeybindings<br />
+/importui<br />
+/inspect<br />
+/invite<br />
+/join<br />
+/kick<br />
+/laugh<br />
+/leader<br />
+/leave<br />
+/loc<br />
+/logoff<br />
+/logout<br />
+/mark<br />
+/mod<br />
+/moderator<br />
+/motd<br />
+/officer<br />
+/osetnotes<br />
+/owner<br />
+/partyleave<br />
+/party<br />
+/password<br />
+/pass<br />
+/petaggressive<br />
+/petattack<br />
+/petcast<br />
+/petdefensive<br />
+/petfollow<br />
+/petpassive<br />
+/petstay<br />
+/played<br />
+/point<br />
+/private<br />
+/public<br />
+/pvptoggle<br />
+/quit<br />
+/raid_create<br />
+/raid_demote<br />
+/raid_disband<br />
+/raid_promote<br />
+/raid<br />
+/raid_readycheck<br />
+/raid_warning<br />
+/random<br />
+/rand<br />
+/reloadui<br />
+/reply<br />
+/report<br />
+/resetinstances<br />
+/resetuitodefaults<br />
+/returntorespawn<br />
+/role<br />
+/roll<br />
+/rope<br />
+/rsay<br />
+/saveequip<br />
+/say<br />
+/serverinfo<br />
+/shout<br />
+/sit<br />
+/startattack<br />
+/startrangedattack<br />
+/stopattack<br />
+/stopcasting<br />
+/targetlasttarget<br />
+/target<br />
+/targetmark<br />
+/tell<br />
+/time<br />
+/trade<br />
+/unannounce<br />
+/unann<br />
+/unban<br />
+/unignore<br />
+/unmod<br />
+/unmoderator<br />
+/use<br />
+/version<br />
+/warfront<br />
+/war<br />
+/wave<br />
+/whisper<br />
+/who<br />
+/yell</div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #7 le <i>2011-2-15 @ 6:08:50</i> par <strong>Bradston:</strong></div>
+<div class="message-body">waah merci de poster ca , cela va etre utile 'en suis sur ! :P</div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #8 le <i>2011-2-15 @ 10:45:42</i> par <strong>Sundown:</strong></div>
+<div class="message-body">Vraiment cool d'avoir trouver la liste !<br />
+<br />
+Message a tous les buffeurs :<br />
+Pensez a creer votre macro et envoyez en tell a votre group, ou dans le channel raid (ca dependra du buff), ce que donne votre buff. Les classes DPS devraient gagner 15-20%(*) de DPS en ajustant leurs cycles aux buffs temporaire.<br />
+<br />
+(*) Estimation, pas assez de recul dans RIFT pour savoir ce que ca pourraite representer.</div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #9 le <i>2011-2-20 @ 21:02:08</i> par <strong>Nekozenji:</strong></div>
+<div class="message-body">Merci Eloctinar, je suis tombé sur ton post au moment même oÃ¹ je voulais la liste des commandes macros. :cool:<br />
+<br />
+J'ai le lien vers le site de <a href="http://telarapedia.com/wiki/Macro" class="bbcode_url"><a href="http://telarapedia.com/">telarapedia.com</a></a> également si ça t'intéresse. Il y a aussi le nom des variables, ce qui est bien utile à mon avis.<br />
+
+<blockquote>
+<cite>Asakra wrote:</cite>
+J'ai pas réussi la macro d'Assist comme faut, quoi que j'ai pas eu le temps de tester beaucoup durant le raid, j'Avais essayer:<br />
+target halter<br />
+assist<br />
+mais ca fonctionnais pas, donc je devais faire le /target halter sur un hotkey R et appuyer sur F (par défaut le target de la target) pour que ca marche... kkun a essayer quelque chose qui fonctionne d'un seul hotkey ?</blockquote>
+<br />
+Ou, tape seulement:<br />
+assist Halter<br />
+<br />
+Quand on est leader du groupe, on peut également utiliser les marques pour assister. Marquer le <i>Main assist </i> avec le chiffre 5 par exemple et faites la macro suivante pour assister:<br />
+/assist @mark 5<br />
+<br />
+Voilà, vous assistez le joueur marquer du 5.<br />
+</div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">Ce site Web est une version en lecture seule du contenu généré par notre communauté depuis 2008.</footer>
+<script async src="https://cse.google.com/cse.js?cx=018371196978176306217:58twx-mazfs"></script>
+</body>
+</html>

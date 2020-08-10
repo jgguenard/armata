@@ -1,0 +1,149 @@
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="assets/styles.css" rel="stylesheet" type="text/css" media="all" />
+    <title>Infoman Pele-Mele</title>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <img alt="logo" src="assets/logo.png" class="logo" />
+        <div class="sub-title">Archives</div>
+        <nav class="site-nav">
+            <a href="index.html">Articles</a>
+            <a href="members.html">Membres</a>
+            <a href="videos.html">Vidéos</a>
+            <a href="forum.html">Forum</a>
+            <a href="a-propos.html">À propos</a>
+        </nav>
+        <div class="note">Si vous avez déjà été membre de la guilde et que vous voulez reprendre contact ou contribuer aux archives, <a href="mailto:contact.armata@gmail.com" target="_blank">écrivez-nous</a> !</div>
+    </header>
+    <div class="page">
+        <div class="search">
+            <div class="gcse-search"></div>
+        </div>
+        <div class="page-content-wrapper">
+            <h1>Infoman Pele-Mele</h1>
+            <div class="content">
+                
+<div class="forum-message">
+<div class="sub-title">Message #1 le <i>2012-8-13 @ 4:08:26</i> par <strong>Eloctinar:</strong></div>
+<div class="message-body">amusez vous a mettre de l'ordre la dedans<br />
+<br />
+<br />
+After many iterations now, this question pops up again:<br />
+<span style="color:#FF0000">How do loot tables work?<br />
+and<br />
+How does Magic Find work?</span>[size=large][/size]I´ll try to explain my understanding and pose a few questions on the specific mechanics.<br />
+Disclaimer: Everything in here is pure theorycrafting on my accord, based on different games and previous discussions. All values are only chosen to help demonstrate the examples.<br />
+Loot Tables<br />
+Now, as far as I´ve gathered from previous discussions and from other games including Diablo III the mechanics work as following:<br />
+First the game checks if you are going to receive an item. Sometimes this guaranteed such as with chests, otherwise it´s random like you´d have with mobs. Mobs that spawn infinitely such as you´ll find at the start of the Ascalon Catacombs Explorables have their drops disabled to counter farming, also critters.<br />
+Question 1: What is the participation requirement for a drop<br />
+and does the amount of participation affect the chance of a drop?<br />
+Question 2: How does a monster´s rank affect the number and chance of drops?<br />
+If an item will drop there is a series of choices that need to be determined. Step by step each property of the item is chosen. For example the first roll would be the type of item: Equipment or Materials. For example:<br />
+Equipment 40% chance, Materials 30% chance, Junk 30% chance<br />
+In order, a roll is made on equipment. A failure creates a second roll in this table for materials. A second failure here will default to generating junk.<br />
+Linsey Murdock said:<br />
+Any time you roll positive to try for a dye, it rolls again and if you fail that roll, you get Dandelions. So every time you see a Dandelion, that could have been a dye. It is the only way we could get the dye unlocks to the rarity that we wanted them to be with the system being the way it is.<br />
+Kind of like 4 Piles of Glittering Dust in Underworld and Fissure of Woe in GW1, that could have been an Ecto or an Obs shard.<br />
+Each time a choice from one table is determined the next is pulled up and the next property is rolled for. More realistic tables would look like:<br />
+Initial: [Special, Armor, Weapon, Crafting Material, Trophy, Coins, Junk]<br />
+Armor: [Chest, Legs, Helm, Shoulder, Gloves, Boots, Trinket]<br />
+Skin: [World type 1, type 2, .. Zone type 1, type 2, .., Creature type 1, type 2, .. ]<br />
+HasUpgrade: [Yes, No]<br />
+Upgrade: [sigil/rune 1, sigil/rune 2, ..]<br />
+Now all that´s left to be determined are the attributes: level, attribute set and rarity. The interesting part here is the rarity roll, as it starts by rolling the highest valued items first:<br />
+_	___Type_____	_Chance____<br />
+Legendary	 1/1000000<br />
+Exotic	 1/1000<br />
+Rare	 1/100<br />
+Masterwork	 1/10<br />
+Fine	 1/2<br />
+Basic	 rest<br />
+.<br />
+Many of these tables are rolled in parallel. The order in which these items are rolled is very important in our next chapter on Magic Find.<br />
+Question 3: What loot tables are there exactly and what order are they in?<br />
+Question 4: How does a mob´s rank affect the quality of drops?<br />
+Magic Find<br />
+Each player has a base percentage of 100% magic find which acts as a multiplier of 1 toward each roll. Magic Find can be increased trough specific equipment, upgrade components, food and buffs.<br />
+For example you equip an Explorer´s Chestpiece of the Traveler with +3% (Explorer) and +7% (Rune) and eat Strawberries and Biscuits giving you an extra +10%. Your new magic find is now 120%.<br />
+With nearly every roll in the loot table this multiplier is applied on the roll. If you would have 200% magic find an item with a chance of 1/1000000 would increase to 2/1000000. Because the rarest item is rolled first the relative chance of each tier stays the same, but you´d have a skewed increase in each chance in favor of the first items.<br />
+Item A has 10% chance, item B has 20% chance. Because each roll is executed in sequence and dependent on the previous the global chance of rolling item A is 10%, but for item B it´s 0.90 * 0.20 = 18% chance.<br />
+Now we apply a magic find multiplier of 2 by equipping an extra 100% MF. Item A : 20%, Item B : 40%. Global chances still are the same for our first item in the row, but the second item becomes 0.80 * 0.40 = 32% chance. Instead of a 100% increase we now see an increase of 77% toward the global chance of item B.<br />
+Question 5: What tables does this multiplier apply to? In other words what does magic find actually affect besides just item rarity?<br />
+Examples: Drop chance, # of drops, item type, skin rarity, upgrade component chance, critical gathering chance.<br />
+Another really important thing to note is that, because Magic Find is based on percentages you have diminishing returns: every extra MF you apply will be less efficient than the previous.<br />
+Say you carry +90% MF for a total of 190%. If you want to double your magic find, a 380% total, it will require an extra +280% MF! It´s easy to forget the base 100%.<br />
+Eventually Magic Find boils down to : how much are you willing to sacrifice to improve your drops? Keep in mind that less damage also means killing mobs slower.<br />
+(edited 4 days ago by Raven Demeyer)<br />
+5 days ago<br />
+Quote Report Permalink<br />
+Raven Demeyer<br />
+Magic Find : the big list<br />
+Now where can you get all this bonus magic find? These are the ones I´ve found, feel free to help complete the list:<br />
+Equipment :<br />
+Explorer armor and weapons have an attribute of +3% MF<br />
+Jewelcrafter´s trinkets (based on opal) can get up to +4% MF<br />
+Runes :<br />
+of Scavenging<br />
+Minor : (2x) 3%<br />
+Major : (2x) 5%, (4x) 10%<br />
+Superior : (?) | + Cond + ?<br />
+of the Pirate (Jewelcrafting, created from dubloons)<br />
+Minor : (1x) 5%<br />
+Major : (1x) 7%, (3x) 13%<br />
+Superior : (1x) 10%, (3x) 15%, (5x) 25% | + Might + Parrot<br />
+of the Traveler<br />
+Minor : (1x) 5%<br />
+Major : (1x) 7%, (3x) 13%<br />
+Superior : (1x) 10%, (3x) 15%, (5x) 25% | +Vit + MS<br />
+of the Noble (Caudecus´s Manor)<br />
+Minor : (1x) 5%<br />
+Major : (1x) 7%, (3x) 13%<br />
+Superior : (1x) 10%, (3x) 15%, (5x) 25% | +Pow + Drakehound<br />
+Sigils :<br />
+Luck (Jewelcrafting, created from dubloons)<br />
+Minor : +0.2% / kill, max 25<br />
+Major : +0.4% / kill, max 25<br />
+Superior : + 0.6 % / kill, max 25<br />
+Jewels<br />
+Sunstone Nugget : 1%<br />
+Sunstone Lump : 1%<br />
+Opal Shard : 2%<br />
+Opal Crystal : 3%<br />
+Opal Orb : 3%<br />
+Dubloons<br />
+Copper : 1%<br />
+Silver : 2%<br />
+Gold : 2%<br />
+Platinum : 3%<br />
+Food :<br />
+Base MF<br />
+Lemon Bars : 10%<br />
+Strawberries and Biscuts [sic] : 10%<br />
+Cherry Almond Bars : 18% | +10% gold<br />
+Omnomberry Bar : 30% | +30% gold<br />
+While under the effect of a boon<br />
+Chocolate Cherries : 12% | 6% duration<br />
+Chocolate Omnombery Cream : 20% | 20% duration, 30 min<br />
+Gemstore<br />
+Magic Find Booster : 50%, 60 minutes<br />
+Guild Boosts<br />
+Magic Find Banner : 10%, 30 minutes | req T1 economy<br />
+Magic Find Boost : 10%, 3 days | req T3 economy<br />
+WWW<br />
+Outmanned (2 or 3x (???) as many enemies as allies in the map) : 33%<br />
+Please send any updates to me. If you´ve got info on what boosts stack and not please share!</div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">Ce site Web est une version en lecture seule du contenu généré par notre communauté depuis 2008.</footer>
+<script async src="https://cse.google.com/cse.js?cx=018371196978176306217:58twx-mazfs"></script>
+</body>
+</html>

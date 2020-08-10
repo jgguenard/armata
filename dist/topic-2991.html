@@ -1,0 +1,261 @@
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="assets/styles.css" rel="stylesheet" type="text/css" media="all" />
+    <title>Macros</title>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <img alt="logo" src="assets/logo.png" class="logo" />
+        <div class="sub-title">Archives</div>
+        <nav class="site-nav">
+            <a href="index.html">Articles</a>
+            <a href="members.html">Membres</a>
+            <a href="videos.html">Vidéos</a>
+            <a href="forum.html">Forum</a>
+            <a href="a-propos.html">À propos</a>
+        </nav>
+        <div class="note">Si vous avez déjà été membre de la guilde et que vous voulez reprendre contact ou contribuer aux archives, <a href="mailto:contact.armata@gmail.com" target="_blank">écrivez-nous</a> !</div>
+    </header>
+    <div class="page">
+        <div class="search">
+            <div class="gcse-search"></div>
+        </div>
+        <div class="page-content-wrapper">
+            <h1>Macros</h1>
+            <div class="content">
+                
+<div class="forum-message">
+<div class="sub-title">Message #1 le <i>2013-3-21 @ 15:08:34</i> par <strong>IRGodlikez:</strong></div>
+<div class="message-body">J'ai pensé que ça pourrait aider certains d'entre vous. Alors voici la liste de tous mes macros pour Rogue.<br />
+Si vous avez des questions pour des macros spécifiques n'hésitez pas.<br />
+<br />
+Macro pour bouger les targets of target<br />
+/run local f = GetMouseFocus(); f:SetUserPlaced(true) f:SetMovable(true) f:EnableMouse(true) f:RegisterForDrag(&quot;LeftButton&quot;) f:SetScript(&quot;OnDragStart&quot;,f.StartMoving) f:SetScript(&quot;OnDragStop&quot;,f.StopMovingOrSizing)<br />
+<br />
+Cheap Shot Arena1-2-3<br />
+#showtooltip<br />
+/cast [@Arena1] Cheap Shot<br />
+<br />
+Garrote Arena1-2-3<br />
+#showtooltip<br />
+/cast [@Arena1] Garrote<br />
+<br />
+Focus Arena1-2-3<br />
+/focus arena1<br />
+<br />
+Target Arena1-2-3<br />
+/target arena3<br />
+<br />
+Blind Arena1-2-3<br />
+#showtooltip<br />
+/cast [@Arena1] Blind<br />
+<br />
+Tricks of the Trade Party1-2-3<br />
+#showtooltip<br />
+/cast [@Party1] Tricks of the Trade<br />
+<br />
+Redirect/Kidney Shot Arena1-2-3<br />
+/target Arena1<br />
+/castsequence reset=59 Redirect, Kidney Shot<br />
+<br />
+Focus Garrote<br />
+#showtooltip Garrote<br />
+/target focus<br />
+/cast [stance:0] Shadow Dance<br />
+/casr [stance:2] Garrote<br />
+/cast [stance:1] Garrote<br />
+/cast [stance:3] Garrote<br />
+/use 13<br />
+/use 14<br />
+/cast Premeditation<br />
+<br />
+Focus Cheap Shot<br />
+#showtooltip Cheap Shot<br />
+/target focus<br />
+/cast [stance:0] Shadow Dance<br />
+/casr [stance:2] Cheap Shot<br />
+/cast [stance:1] Cheap Shot<br />
+/cast [stance:3] Cheap Shot<br />
+/use 13<br />
+/use 14<br />
+/sw 23<br />
+/sw play<br />
+/cast Premeditation<br />
+<br />
+Redirect Focus Kidney Shot<br />
+/target focus<br />
+/castsequence reset=59 Redirect, Kidney Shot<br />
+<br />
+Shuriken Toss Focus<br />
+#showtooltip Shuriken Toss<br />
+/cast [@focus] Shuriken Toss<br />
+/startattack<br />
+<br />
+<br />
+Goblin Glider<br />
+/use 15<br />
+<br />
+Mounts<br />
+#showtooltip<br />
+/use [flyable] &quot;Insert Flying Mount Name&quot;<br />
+/use [noflyable] &quot;Insert Ground Mount Name&quot;<br />
+/script VehicleExit()<br />
+/dismount [mounted]<br />
+<br />
+Preparation<br />
+#showtooltip Preparation<br />
+/cast Vanish<br />
+/stopcasting<br />
+/cast Sprint<br />
+/stopcasting<br />
+/cast Evasion<br />
+/stopcasting<br />
+/cast preparation<br />
+<br />
+Shadow Blades<br />
+#showtooltip Shadow Blades<br />
+/use 10<br />
+/use 13<br />
+/use 14<br />
+/cast Shadow Blades<br />
+Shadow Dance<br />
+#showtooltip<br />
+/cancelaura Subterfuge<br />
+/cast Shadow Dance<br />
+/cancelaura Synapse Spring<br />
+/use 13<br />
+/use 14<br />
+<br />
+Sprint/Nitro Boosts<br />
+#showtooltip Sprint<br />
+/use 6<br />
+/cast Sprint<br />
+<br />
+Shadow Walk/Shuriken Toss<br />
+#showtooltip [stance:0/3] Shuriken Toss; [stance:1/2] Shadow Walk<br />
+/cast [stance:0/3] Shuriken Toss<br />
+/cast [stance:1/2] Shadow Walk<br />
+/startattack<br />
+<br />
+Stealth<br />
+#showtooltip<br />
+/cast Stealth<br />
+/stopattack<br />
+<br />
+Stealth Sap/ Wound, Mind-Numbing<br />
+#showtooltip<br />
+/cleartarget<br />
+/targetenemyplayer<br />
+/cast [stance:2/3/1] sap<br />
+/castsequence [stance:0]Wound Poison, Mind-Numbing Poison<br />
+<br />
+Ambush/Backstab<br />
+#showtooltip<br />
+/cast [stance:3] Ambush<br />
+/cast [stance:1] Ambush<br />
+/cast [stance:0] Backstab<br />
+/use 10<br />
+/cast Premeditation<br />
+<br />
+Focus Gouge<br />
+/cast [@focus] Gouge<br />
+<br />
+Focus kick<br />
+/cast [@focus] Kick<br />
+<br />
+Fan of Knives<br />
+#showtooltip<br />
+/cast Fan of Knives<br />
+/startattack<br />
+<br />
+Focus Sap<br />
+/cast [@focus] Sap<br />
+<br />
+Focus Shiv<br />
+#showtooltip Shiv<br />
+/cast [@focus] Shiv<br />
+<br />
+Garrote while stealthed/Dance and Rupture while not stealthed<br />
+#showtooltip<br />
+/cast [stance:0] Rupture<br />
+/cast [stance:1] Garrote<br />
+/cast [stance:2] Garrote<br />
+/cast [stance:3] Garrote<br />
+/cast Premeditation<br />
+<br />
+Hemorrhage<br />
+#showtooltip<br />
+/cast Hemorrhage<br />
+/startattack<br />
+<br />
+Cheap Shot while stealthed/Dance and Kidney Shot while not stealthed<br />
+#showtooltip<br />
+/cast [stance:3] cheap shot<br />
+/cast [stance:1] cheap shot<br />
+/cast [stance:2] cheap shot<br />
+/cast [stance:0] Kidney shot<br />
+/cast Premeditation<br />
+/sw 23<br />
+/sw play<br />
+<br />
+Slice and Dice and Prem<br />
+#showtooltip<br />
+/cast Slice and Dice<br />
+/cast Premeditation<br />
+<br />
+Trinket<br />
+#showtooltip<br />
+/cast Every Man For Himself<br />
+/cast !Stealth</div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #2 le <i>2013-3-21 @ 15:19:58</i> par <strong>drbeefz:</strong></div>
+<div class="message-body">Salut je vois que tu as beaucoup de macros d'arena 3v3.<br />
+Comment cela affecte tes RBGs ? Utilises-tu à ce moment juste des macros de focus ?<br />
+Tu ne trouves pas ça difficile à gérer tes cds ? Incorpores tu des diffirents #showtooltips sur les habiletés sans cooldown ?<br />
+[hr]<br />
+Aussi, te fais tu un macro appart pour burst ou tout simplement sur habiletés ?<br />
+Auparavant je fesais sur habiletés, mais avec l'expérience j'ai commencé à utiliser plus un ''on use''.</div>
+</div>
+<div class="forum-message">
+<div class="sub-title">Message #3 le <i>2013-3-21 @ 17:39:04</i> par <strong>IRGodlikez:</strong></div>
+<div class="message-body">Â«Salut je vois que tu as beaucoup de macros d'arena 3v3.<br />
+Comment cela affecte tes RBGs ? Utilises-tu à ce moment juste des macros de focus ?Â»<br />
+<br />
+En ce moment j'utilise beaucoup de macro de focus pour RBG, j'ai setté un hotkey pour mettre les focus en mouseover et je te dirais qu'avec Battleground targets, ça fait la job (Je n'utilisais pas BGT avant semaine passé). Honnêtement, je ne peux pas te dire comment cela affecte mes RBGs puisqu'avant la semaine passé je n'en avais jamais fait. Avec les macros de focus je trouve que le gameplay est assez fluide dans pas mal toutes les situations, que ce soit RBG ou arena (arena est supporter un peu plus avec avec les /cast [@arena1-2-3]). Est ce que tu utilises d'autres sortes de macros pour le RBG Beef? Je pourrais peut-être penser aux /cast [@mouseover, exists], mais les mouseover empêche de bien bouger avec la souris. Si jamais tu as des suggestions je suis ouvert!<br />
+<br />
+<br />
+Â«Tu ne trouves pas ça difficile à gérer tes cds ? Incorpores tu des diffirents #showtooltips sur les habiletés sans cooldown ? Aussi, te fais tu un macro appart pour burst ou tout simplement sur habiletés ?Â»<br />
+<br />
+Non je te dirais que je n'ai pas de difficulté à gérer mes cooldowns. J'ai pas mal pensé à tout en faisant mes macros en terme de visibilité des cooldowns(du moins je crois). Pour ce qui est des #showtooltip, la beauté avec mes macros est qu'ils s'ajustent en fonction de la stance dans laquelle je suis (et oui les rogues on des stances).Par exemple:<br />
+<br />
+Cheap Shot while stealthed/Dance and Kidney Shot while not stealthed<br />
+#showtooltip<br />
+/cast [stance:3] cheap shot<br />
+/cast [stance:1] cheap shot<br />
+/cast [stance:2] cheap shot<br />
+/cast [stance:0] Kidney shot<br />
+/cast Premeditation<br />
+/sw 23<br />
+/sw play<br />
+<br />
+Si je suis Vanish, Stealth ou en Shadowdance, l'image de l'habilité sera celle de Cheap Shot et si je suis Unstealth, sans vanish buff et sans dance, ce sera Kidney Shot. Plusieurs de mes macros utilisent cette fonction. Elle peut aussi être pratique pour évitez le &quot;bar lag&quot; de l'interface de barre default de WoW. Puisque le macro va s'ajuster à la stance du rogue avant que la barre ne réagisse et permettre des réactions plus dynamiques. Je ne suis pas certain que le &quot;bar lag&quot; existe encore dans MoP, mais je sais qu'il était présent dans Cataclysm.<br />
+<br />
+Pour les macros de Burst, ça dépend. Par exemple, pour mon macro de Shadowdance: le on-use trinket à le même Cooldown que la Shadowdance. Comme la Shadowdance est le plus gros cooldown offensif d'un rogue (après Shadowblades) il est donc évident de mettre les deux ensemble puisqu'ils ont une très bonne synergie. Par contre, comme le cooldown de Shadowblades est de 3 minutes et que la dance peut parfois être utilisée pour les peels ou pour le CC, jumeler Shadowblades (qui est exclusivement offensif) et Shadowdance est un &quot;no go&quot;. C'est pourquoi j'ai séparé les deux. Le seul burst que j'ai indexé avec mes habiletés est Synaspe Spring (/use 10 (enchant de glove d'engineer)) avec mon macro de Backstab/Ambush. La raison est que Synaspe ne peut pas être utilisé en même temps que le &quot;on use&quot; trinket. Alors la facon la plus facile de l'integrer pour donner du dommage plus constant est dans mon backstab (un mini burst) à chaque 1 minute. C'est aussi pourquoi dans mon macro de Shadowdance j'ai un /cancelaura Synaspe Spring pour être certain que c'est bel et bien le bonus de mon &quot;on use&quot; trinket que j'ai durant ma Shadowdance et non celui de Synaspe (2400 agi vs 1900).<br />
+<br />
+Donc oui je fais des macros avec mini-burst sur habilité, mais le gros burst est appart et cancel le buff du mini-burst qui ne stack pas avec le gros burst.<br />
+<br />
+J'espère que ça répond bien à tes questions sinon je crois qu'il serait plus facile d'expliquer tout ça sur TS :)</div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">Ce site Web est une version en lecture seule du contenu généré par notre communauté depuis 2008.</footer>
+<script async src="https://cse.google.com/cse.js?cx=018371196978176306217:58twx-mazfs"></script>
+</body>
+</html>

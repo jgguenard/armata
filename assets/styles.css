@@ -1,0 +1,167 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    box-sizing: border-box;
+    background: #eee;
+}
+
+.content table {
+    margin-top: 15px;
+}
+
+.content table, .content th, .content td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    vertical-align: top;
+}
+
+.content th {
+    text-align: left;
+    padding: 7px 15px;
+}
+
+.content td {
+    padding: 7px 15px;
+}
+
+a {
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h2, h3, h4, h5, h6 {
+    margin: 8px 0;
+}
+
+a:hover {
+    color: #9C0A0A;
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin: 30px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    flex-shrink: 0;
+    border-right: 1px solid #ccc;
+    padding: 30px;
+    text-align: center;
+}
+
+.sub-title {
+    color: #666;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.site-nav {
+    width: 100%;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+
+.site-nav a {
+    padding: 10px 30px;
+    text-align: center;
+}
+
+.page {
+    flex: 1;
+}
+
+.page-content-wrapper {
+    border-top: 1px solid #ccc;
+    padding: 15px 30px 30px 30px;
+}
+
+.footer {
+    text-align: center;
+    color: #999;
+    margin-bottom: 30px;
+}
+
+.page_link {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    border: 1px solid #ccc;
+    margin-top: 15px;
+    padding: 7px 15px;
+    border-radius: 20px;
+}
+
+.blog_body {
+    margin-top: 15px;
+}
+.video {
+    border: 1px solid #ccc;
+    margin-top: 15px;
+    padding: 8px 15px 15px 15px;
+    border-radius: 20px;
+}
+.video a {
+    font-weight: bold;
+}
+.video-heading {
+    display:flex;
+    justify-content: space-between;
+}
+
+.video-description {
+    text-align: justify;
+}
+
+.search {
+    min-height: 55px !important;
+}
+
+.gsc-control-cse {
+    padding: 10px !important;
+    background: transparent !important;
+    border: none !important;
+}
+.forum-message {
+    margin-top: 15px;
+}
+.message-body {
+    background: #eee;
+    padding: 15px;
+}
+h2.blog_comments {
+    border-top: 1px solid #ccc;
+    margin-top: 30px;
+    padding-top: 5px;
+}
